@@ -22,7 +22,7 @@ J = 0;
 %J /= (2*m);
 
 % Condensed implementation - straightforward
-J = sum((X * theta - y) .^ 2) / (2 * m)
+J = sum((X * theta - y) .^ 2) / (2 * m);
 
 % =========================================================================
 

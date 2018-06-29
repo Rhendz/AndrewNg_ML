@@ -18,8 +18,8 @@ for iter = 1:num_iters
     %
 
     % This is the partial derivative component
-    deriv = (X' * (X * theta - y)) ./ m
-    theta -= alpha * deriv
+    deriv = (X' * (X * theta - y)) ./ m;
+    theta -= alpha * deriv;
     
     % ============================================================
 

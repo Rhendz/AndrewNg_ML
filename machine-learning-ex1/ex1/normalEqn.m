@@ -13,7 +13,7 @@ theta = zeros(size(X, 2), 1);
 % pinv() is used in case X' * X is non-invertible
 % - this could be due to redundant features (linearly dependent)
 % - or too many features
-theta = pinv(X' * X) * X' * y
+theta = pinv(X' * X) * X' * y;
 
 % ============================================================
 

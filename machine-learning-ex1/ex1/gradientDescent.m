@@ -30,8 +30,8 @@ for iter = 1:num_iters
     
     % The more compact version that utilizes vectorization
     % The derivative component
-    deriv = (X' * (X * theta - y)) ./ m
-    theta -= alpha * deriv
+    deriv = (X' * (X * theta - y)) ./ m;
+    theta -= alpha * deriv;
     
     % ============================================================
 
