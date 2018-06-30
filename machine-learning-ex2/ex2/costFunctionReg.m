@@ -17,10 +17,18 @@ grad = zeros(size(theta));
 %               Compute the partial derivatives and set grad to the partial
 %               derivatives of the cost w.r.t. each parameter in theta
 
+% theta(1) is not included
+% It helps drawing out how these vectors are received
+% In this example, theta is a column vector, while grad ends up being a row
+% vector.
 
+h = sigmoid(X * theta);
+J = ((-y' * log(h) - (1 - y)' * log(1 - h))) / m
+J += (lambda / (2 * m)) * sum(theta(2:end, :) .^ 2) % Regularization component
 
-
-
+grad = ((h - y)' * X) ./ m
+reg_component = ((lambda / m) .* theta(2:end, :)); % Regularization component
+grad(:, 2:end) += reg_component';
 
 % =============================================================
 

@@ -15,11 +15,9 @@ p = zeros(m, 1);
 %               You should set p to a vector of 0's and 1's
 %
 
-
-
-
-
-
+% Array elements that meet a certain condition
+z = sigmoid(X * theta); % Transformed array
+p = z >= 0.5;
 
 % =========================================================================
 
